@@ -53,7 +53,7 @@ public class HelloApplication extends Application {
 
 
     // MENU
-//    MediaPlayer mediaPlayer1;
+    MediaPlayer mediaPlayer1;
     public void Menu(Stage stage){
         Group menuRoot = new Group();
         viewAmaraMenu.setTranslateX(600);
@@ -62,12 +62,13 @@ public class HelloApplication extends Application {
         menuBackView1b.setTranslateY(20);
         menuBackView1c.setTranslateY(20);
 
-        String musicFile = "file:media/asdfghj.mp3";     // For example
-//        Media sound = new Media(new File(musicFile).toURI().toString());
-//        mediaPlayer1 = new MediaPlayer(sound);
-//        mediaPlayer1.setVolume(0.7);
+        String musicFile = "media/asdfghj.mp3";     // For example
+//        String musicFile = "C:/Users/ander/dev/queen/queen/media/asdfghj.mp3";     // For example
+        Media sound = new Media(new File(musicFile).toURI().toString());
+        mediaPlayer1 = new MediaPlayer(sound);
+        mediaPlayer1.setVolume(0.7);
 
-//        mediaPlayer1.play();
+        mediaPlayer1.play();
 
         timerMenu = new AnimationTimer() {
             @Override
@@ -193,15 +194,16 @@ public class HelloApplication extends Application {
 
     //SCENE 1
     public AnimationTimer timerScene1;
-//    MediaPlayer mediaPlayer2;
+    MediaPlayer mediaPlayer2;
 
     public void Scene1(Stage stage){
         scene1Root = new Group();
         scene1Scene = new Scene(scene1Root, 1240, 740);
 
-        String musicFile = "asdfgh.mp3";     // For example
-//        Media sound = new Media(new File(musicFile).toURI().toString());
-//        mediaPlayer2 = new MediaPlayer(sound);
+        String musicFile = "media/asdfgh.mp3";     // For example
+//        String musicFile = "C:/Users/ander/dev/queen/queen/media/asdfgh.mp3";     // For example
+        Media sound = new Media(new File(musicFile).toURI().toString());
+        mediaPlayer2 = new MediaPlayer(sound);
 
 
 
@@ -221,10 +223,10 @@ public class HelloApplication extends Application {
                 e1.printStackTrace();
             }
 
-//            mediaPlayer1.setVolume(mediaPlayer1.getVolume() - 0.01);
+            mediaPlayer1.setVolume(mediaPlayer1.getVolume() - 0.01);
         }
-//        mediaPlayer1.setVolume(0.0);
-//        mediaPlayer1.stop();
+        mediaPlayer1.setVolume(0.0);
+        mediaPlayer1.stop();
         AddItems();
         MoveWalls(0);
 
@@ -238,7 +240,7 @@ public class HelloApplication extends Application {
 
                 if(wallLocation > 1){
 
-//                    mediaPlayer2.play();
+                    mediaPlayer2.play();
                 }
 
                 // Change Amara's sprite depending on the direction she is moving
